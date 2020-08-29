@@ -22,7 +22,9 @@
         "symlink": true,
         "overwrite": true,
         "file-mapping": {
-          "[web-root]/sites/default/default.settings.php": "./settings.include"
+          "[web-root]/sites/default/default.settings.php": {
+            "prepend": "./settings.include"
+          }
         }
       }
     },

@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "drupal/core-composer-scaffold": "^8.8",
+        "drupal/core-composer-scaffold": "^9.0",
         "drupal/memcache": "^2.0"
     },
     "extra": {

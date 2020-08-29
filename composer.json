@@ -23,7 +23,7 @@
         "overwrite": true,
         "file-mapping": {
           "[web-root]/sites/default/default.settings.php": {
-            "prepend": "./settings.include"
+            "append": "./settings.include"
           }
         }
       }

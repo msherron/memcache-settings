@@ -1,0 +1,5 @@
+$repo_root = dirname(DRUPAL_ROOT);
+$memcacheSettingsFile = $repo_root . '/vendor/acquia/memcache-settings/memcache.settings.php';
+if (file_exists($memcacheSettingsFile)) {
+  require $memcacheSettingsFile;
+}

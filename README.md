@@ -11,7 +11,9 @@ To use these settings, you must already have configured a [Composer-based Drupal
 
 `composer require acquia/memcache-settings`
 
-Finally, you must include the provided `memcache.settings.php` in your own settings.php file (for Acquia Cloud) or post-settings-php hook (for Acquia Cloud Site Factory):
+If you list `acquia/memcache-settings` in your project-level composer.json in the extra.drupal-scaffold.allowed-packages array, memcache.settings.php will be loaded automatically and no other configuration is required. [See Drupal Core's documentaiton on composer-scaffold](https://git.drupalcode.org/project/drupal/-/blob/9.0.x/composer/Plugin/Scaffold/README.md).
+
+Or, you can manually include the provided `memcache.settings.php` in your own settings.php file (for Acquia Cloud) or post-settings-php hook (for Acquia Cloud Site Factory):
 ```
 $repo_root = dirname(DRUPAL_ROOT);
 $memcacheSettingsFile = $repo_root . '/vendor/acquia/memcache-settings/memcache.settings.php';
@@ -20,7 +22,7 @@ if (file_exists($memcacheSettingsFile)) {
 }
 ```
 
-Note that if you use [Acquia BLT](https://github.com/acquia/blt), this step is unnecessary as BLT will automatically include this file.
+Note that if you use [Acquia BLT](https://github.com/acquia/blt), all of the above is unnecessary as BLT will automatically include this file.
 
 # License
 

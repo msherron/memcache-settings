@@ -11,7 +11,20 @@
         }
     ],
     "require": {
+        "drupal/core-composer-scaffold": "^8.8",
         "drupal/memcache": "^2.0"
+    },
+    "extra": {
+      "drupal-scaffold": {
+        "locations": {
+          "web-root": "./docroot"
+        },
+        "symlink": true,
+        "overwrite": true,
+        "file-mapping": {
+          "[web-root]/sites/default/default.settings.php": "./settings.include"
+        }
+      }
     },
     "repositories": {
         "drupal": {
